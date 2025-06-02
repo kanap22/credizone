@@ -1,0 +1,383 @@
+/* --- Estilos base y header --- */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #2e7d32;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo-container h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.dot {
+  color: yellow;
+}
+
+.tizayuca-black {
+  color: black;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #c8e6c9;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* --- Carrusel --- */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.carousel-container {
+  position: relative;
+  height: 100%;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  transform: translateX(0) scale(1.05);
+  z-index: 1;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* --- Sección promociones --- */
+.promociones {
+  padding: 40px 20px;
+  background-color: #e8f5e9;
+  text-align: center;
+}
+
+.promociones h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #2e7d32;
+}
+
+.promociones-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.promo-item {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+  width: 280px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.promo-item:hover {
+  transform: translateY(-10px);
+}
+
+.promo-item img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.promo-item h3 {
+  margin: 0 0 10px;
+  color: #1b5e20;
+}
+
+.promo-item p {
+  font-size: 15px;
+  margin-bottom: 15px;
+  color: #4caf50;
+}
+
+.promo-item button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.promo-item button:hover {
+  background-color: #1b5e20;
+}
+
+/* --- Sección testimonios --- */
+.testimonios {
+  padding: 40px 20px;
+  background-color: #f1f8e9;
+  text-align: center;
+}
+
+.testimonios h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #558b2f;
+}
+
+.testimonios-grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.testimonio-item {
+  background: white;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+  border-radius: 8px;
+  padding: 25px;
+  max-width: 320px;
+  font-style: italic;
+  color: #33691e;
+}
+
+.testimonio-item span {
+  display: block;
+  margin-top: 15px;
+  font-weight: 700;
+  font-style: normal;
+  color: #2e7d32;
+}
+
+/* --- Sección ventajas --- */
+.ventajas {
+  padding: 40px 20px;
+  background-color: #dcedc8;
+  text-align: center;
+}
+
+.ventajas h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #33691e;
+}
+
+.ventajas-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.ventaja-item {
+  background: white;
+  padding: 20px;
+  max-width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  cursor: default;
+  transition: box-shadow 0.3s ease;
+}
+
+.ventaja-item:hover {
+  box-shadow: 0 6px 20px rgb(0 0 0 / 0.15);
+}
+
+.ventaja-item img {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.ventaja-item h3 {
+  margin: 0 0 10px;
+  color: #558b2f;
+}
+
+.ventaja-item p {
+  font-size: 15px;
+  color: #558b2f;
+  margin: 0;
+}
+
+/* --- Sección contacto --- */
+.contact-section {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+.contact-section h2 {
+  margin-bottom: 10px;
+}
+
+.contact-section form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: grid;
+  gap: 10px;
+}
+
+.contact-section input,
+.contact-section textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
+.contact-section button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* --- Footer estilo Macropay --- */
+footer {
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer-simple {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-simple p {
+  margin: 6px 0;
+}
+
+.footer-simple p em {
+  color: #4caf50;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.footer-simple a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-simple a:hover {
+  color: #4caf50;
+  text-decoration: underline;
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #4caf50;
+  text-decoration: underline;
+}
+
+/* --- Catálogo estilo lista tipo Mercado Libre --- */
+.catalogo {
+  padding: 40px 20px;
+  background-color: #f1f8e9;
+  text-align: center;
+}
+
+.catalogo h2 {
+  font-size: 28px;
+  color: #2e7d32;
+  margin-bottom: 30px;
+}
+
+.catalogo-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.catalogo-item {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.catalogo-item img {
+  width: 120px;
+  height: auto;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
+.catalogo-item-info h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #1b5e20;
+}
+
+.catalogo-item-info p {
+  margin: 5px 0;
+  color: #4caf50;
+  font-weight: 500;
+}

@@ -6,6 +6,50 @@
   <title>CrediZone Tizayuca</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="index.css" />
+  <style>
+    /* Estilos adicionales para especificaciones y compra */
+    .catalogo-item button {
+      background-color: #2e7d32;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+    }
+    .catalogo-item button:hover {
+      background-color: #1b5e20;
+    }
+    .specs, .compra-form {
+      margin-top: 10px;
+      background: #e8f5e9;
+      padding: 10px;
+      border-radius: 6px;
+      display: none;
+      font-size: 14px;
+    }
+    .compra-form input, .compra-form button {
+      margin-top: 5px;
+      width: 100%;
+      padding: 6px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+    .compra-form button {
+      background-color: #2e7d32;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+    .compra-form button:hover {
+      background-color: #1b5e20;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -21,26 +65,170 @@
         <li><a href="quienes somos.html">Quiénes somos</a></li>
         <li><a href="catalogo.html">Catálogo</a></li>
         <li><a href="requisitos.html">Requisitos</a></li>
-        <!-- Eliminé el enlace "Contacto" según lo solicitado -->
       </ul>
     </nav>
   </header>
 
-  <section class="carousel">
-    <div class="carousel-container">
-      <div class="carousel-slide active"><img src="oferta1.jpg" alt="Oferta 1" /></div>
-      <div class="carousel-slide"><img src="oferta2.jpg" alt="Oferta 2" /></div>
-      <div class="carousel-slide"><img src="oferta3.jpg" alt="Oferta 3" /></div>
-      <div class="carousel-slide"><img src="oferta4.jpg" alt="Oferta 4" /></div>
-      <div class="carousel-slide"><img src="oferta5.jpg" alt="Oferta 5" /></div>
-      <div class="carousel-slide"><img src="oferta6.jpg" alt="Oferta 6" /></div>
-      <div class="carousel-slide"><img src="oferta7.jpg" alt="Oferta 7" /></div>
-      <div class="carousel-slide"><img src="oferta8.jpg" alt="Oferta 8" /></div>
-      <div class="carousel-slide"><img src="oferta9.jpg" alt="Oferta 9" /></div>
-      <div class="carousel-slide"><img src="oferta10.jpg" alt="Oferta 10" /></div>
-      <div class="carousel-slide"><img src="oferta11.jpg" alt="Oferta 11" /></div>
-      <div class="carousel-slide"><img src="oferta12.jpg" alt="Oferta 12" /></div>
-      <div class="carousel-slide"><img src="oferta13.jpg" alt="Oferta 13" /></div>
+  <section class="catalogo">
+    <h2>Catálogo de Celulares</h2>
+    <div class="catalogo-lista">
+
+      <div class="catalogo-item" data-model="TECNO Go spark Go1">
+        <img src="celular1.jpg" alt="TECNO Go spark Go1" />
+        <div class="catalogo-item-info">
+          <h3>TECNO Go spark Go1</h3>
+          <p>$3,899 MXN</p>
+          <button class="btn-espec">Ver especificaciones</button>
+          <div class="specs">
+            <ul>
+              <li>Pantalla: 6.52 pulgadas</li>
+              <li>Cámara: 8 MP trasera</li>
+              <li>Batería: 5000 mAh</li>
+              <li>RAM: 2 GB</li>
+              <li>Almacenamiento: 32 GB</li>
+            </ul>
+          </div>
+          <button class="btn-comprar">Comprar</button>
+          <div class="compra-form">
+            <p><strong>Compra TECNO Go spark Go1</strong></p>
+            <input type="text" placeholder="Nombre completo" required />
+            <input type="tel" placeholder="Teléfono" required />
+            <input type="email" placeholder="Correo electrónico" />
+            <button class="btn-enviar">Enviar solicitud</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="catalogo-item" data-model="Redmi Note 14">
+        <img src="celular2.jpg" alt="Redmi Note 14" />
+        <div class="catalogo-item-info">
+          <h3>Redmi Note 14</h3>
+          <p>$4,299 MXN</p>
+          <button class="btn-espec">Ver especificaciones</button>
+          <div class="specs">
+            <ul>
+              <li>Pantalla: 6.43 pulgadas AMOLED</li>
+              <li>Cámara: 50 MP trasera</li>
+              <li>Batería: 5000 mAh</li>
+              <li>RAM: 4 GB</li>
+              <li>Almacenamiento: 64 GB</li>
+            </ul>
+          </div>
+          <button class="btn-comprar">Comprar</button>
+          <div class="compra-form">
+            <p><strong>Compra Redmi Note 14</strong></p>
+            <input type="text" placeholder="Nombre completo" required />
+            <input type="tel" placeholder="Teléfono" required />
+            <input type="email" placeholder="Correo electrónico" />
+            <button class="btn-enviar">Enviar solicitud</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="catalogo-item" data-model="HONOR X8b">
+        <img src="celular3.jpg" alt="HONOR X8b" />
+        <div class="catalogo-item-info">
+          <h3>HONOR X8b</h3>
+          <p>$4,899 MXN</p>
+          <button class="btn-espec">Ver especificaciones</button>
+          <div class="specs">
+            <ul>
+              <li>Pantalla: 6.7 pulgadas</li>
+              <li>Cámara: 64 MP trasera</li>
+              <li>Batería: 4000 mAh</li>
+              <li>RAM: 6 GB</li>
+              <li>Almacenamiento: 128 GB</li>
+            </ul>
+          </div>
+          <button class="btn-comprar">Comprar</button>
+          <div class="compra-form">
+            <p><strong>Compra HONOR X8b</strong></p>
+            <input type="text" placeholder="Nombre completo" required />
+            <input type="tel" placeholder="Teléfono" required />
+            <input type="email" placeholder="Correo electrónico" />
+            <button class="btn-enviar">Enviar solicitud</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="catalogo-item" data-model="HONOR X9c">
+        <img src="celular4.jpg" alt="HONOR X9c" />
+        <div class="catalogo-item-info">
+          <h3>HONOR X9c</h3>
+          <p>$9,999 MXN</p>
+          <button class="btn-espec">Ver especificaciones</button>
+          <div class="specs">
+            <ul>
+              <li>Pantalla: 6.72 pulgadas</li>
+              <li>Cámara: 48 MP trasera</li>
+              <li>Batería: 5100 mAh</li>
+              <li>RAM: 8 GB</li>
+              <li>Almacenamiento: 128 GB</li>
+            </ul>
+          </div>
+          <button class="btn-comprar">Comprar</button>
+          <div class="compra-form">
+            <p><strong>Compra HONOR X9c</strong></p>
+            <input type="text" placeholder="Nombre completo" required />
+            <input type="tel" placeholder="Teléfono" required />
+            <input type="email" placeholder="Correo electrónico" />
+            <button class="btn-enviar">Enviar solicitud</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="catalogo-item" data-model="Moto G85">
+        <img src="celular5.jpg" alt="Moto G85" />
+        <div class="catalogo-item-info">
+          <h3>Moto G85</h3>
+          <p>$5,299 MXN</p>
+          <button class="btn-espec">Ver especificaciones</button>
+          <div class="specs">
+            <ul>
+              <li>Pantalla: 6.5 pulgadas</li>
+              <li>Cámara: 48 MP trasera</li>
+              <li>Batería: 5000 mAh</li>
+              <li>RAM: 4 GB</li>
+              <li>Almacenamiento: 64 GB</li>
+            </ul>
+          </div>
+          <button class="btn-comprar">Comprar</button>
+          <div class="compra-form">
+            <p><strong>Compra Moto G85</strong></p>
+            <input type="text" placeholder="Nombre completo" required />
+            <input type="tel" placeholder="Teléfono" required />
+            <input type="email" placeholder="Correo electrónico" />
+            <button class="btn-enviar">Enviar solicitud</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="catalogo-item" data-model="HONOR 200">
+        <img src="celular6.jpg" alt="HONOR 200" />
+        <div class="catalogo-item-info">
+          <h3>HONOR 200</h3>
+          <p>$5,399 MXN</p>
+          <button class="btn-espec">Ver especificaciones</button>
+          <div class="specs">
+            <ul>
+              <li>Pantalla: 6.67 pulgadas OLED</li>
+              <li>Cámara: 48 MP trasera</li>
+              <li>Batería: 4500 mAh</li>
+              <li>RAM: 6 GB</li>
+              <li>Almacenamiento: 128 GB</li>
+            </ul>
+          </div>
+          <button class="btn-comprar">Comprar</button>
+          <div class="compra-form">
+            <p><strong>Compra HONOR 200</strong></p>
+            <input type="text" placeholder="Nombre completo" required />
+            <input type="tel" placeholder="Teléfono" required />
+            <input type="email" placeholder="Correo electrónico" />
+            <button class="btn-enviar">Enviar solicitud</button>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -135,28 +323,47 @@
   </footer>
 
   <script>
-    const slides = document.querySelectorAll('.carousel-slide');
-    let current = 0;
+    // Mostrar y ocultar especificaciones y formulario compra
+    document.querySelectorAll('.catalogo-item').forEach(item => {
+      const btnEspec = item.querySelector('.btn-espec');
+      const specs = item.querySelector('.specs');
+      const btnComprar = item.querySelector('.btn-comprar');
+      const compraForm = item.querySelector('.compra-form');
 
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.remove('active');
-        slide.style.opacity = '0';
-        slide.style.transform = 'translateX(100%)';
+      btnEspec.addEventListener('click', () => {
+        if (specs.style.display === 'block') {
+          specs.style.display = 'none';
+          btnEspec.textContent = 'Ver especificaciones';
+        } else {
+          specs.style.display = 'block';
+          btnEspec.textContent = 'Ocultar especificaciones';
+        }
       });
 
-      slides[index].classList.add('active');
-      slides[index].style.opacity = '1';
-      slides[index].style.transform = 'translateX(0) scale(1.05)';
-    }
+      btnComprar.addEventListener('click', () => {
+        if (compraForm.style.display === 'block') {
+          compraForm.style.display = 'none';
+          btnComprar.textContent = 'Comprar';
+        } else {
+          compraForm.style.display = 'block';
+          btnComprar.textContent = 'Cerrar compra';
+          // ocultar specs si están visibles
+          specs.style.display = 'none';
+          btnEspec.textContent = 'Ver especificaciones';
+        }
+      });
 
-    function nextSlide() {
-      current = (current + 1) % slides.length;
-      showSlide(current);
-    }
-
-    setInterval(nextSlide, 3500);
-    showSlide(current);
+      // Evitar que el botón enviar haga un reload de la página
+      const btnEnviar = compraForm.querySelector('.btn-enviar');
+      btnEnviar.addEventListener('click', e => {
+        e.preventDefault();
+        alert('¡Gracias por tu solicitud! Nos pondremos en contacto contigo pronto.');
+        compraForm.style.display = 'none';
+        btnComprar.textContent = 'Comprar';
+        compraForm.querySelectorAll('input').forEach(input => input.value = '');
+      });
+    });
   </script>
+
 </body>
 </html>

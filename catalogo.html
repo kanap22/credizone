@@ -5,6 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Catálogo de Celulares</title>
   <link rel="stylesheet" href="index.css" />
+  <style>
+    /* Estilos para el modal de compra */
+    .modal {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0,0,0,0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .modal-content {
+      background: white;
+      padding: 20px;
+      border-radius: 5px;
+      max-width: 400px;
+      width: 90%;
+      box-sizing: border-box;
+    }
+    .modal-close {
+      float: right;
+      cursor: pointer;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .modal-close:hover {
+      color: red;
+    }
+    #form-compra input, #form-compra textarea {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+    #form-compra button {
+      background-color: #2e7d32;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    #form-compra button:hover {
+      background-color: #1b4d1a;
+    }
+  </style>
 </head>
 <body>
 
@@ -27,83 +74,93 @@
     <h2>Catálogo de Celulares</h2>
     <div class="catalogo-lista">
 
-      <div class="catalogo-item">
-        <img src="celular1.jpg" alt="Celular 1">
+      <div class="catalogo-item" data-id="1">
+        <img src="celular1.jpg" alt="Celular TECNO Go spark Go1">
         <div class="catalogo-item-info">
           <h3>TECNO Go spark Go1</h3>
           <p>$3,899 MXN</p>
+          <button class="btn-comprar">Comprar</button>
         </div>
       </div>
 
-      <div class="catalogo-item">
-        <img src="celular2.jpg" alt="Celular 2">
+      <div class="catalogo-item" data-id="2">
+        <img src="celular2.jpg" alt="Celular Redmi Note 14">
         <div class="catalogo-item-info">
           <h3>Redmi Note 14</h3>
           <p>$4,299 MXN</p>
+          <button class="btn-comprar">Comprar</button>
         </div>
       </div>
 
-      <div class="catalogo-item">
-        <img src="celular3.jpg" alt="Celular 3">
+      <div class="catalogo-item" data-id="3">
+        <img src="celular3.jpg" alt="Celular HONOR X8b">
         <div class="catalogo-item-info">
           <h3>HONOR X8b</h3>
           <p>$4,899 MXN</p>
+          <button class="btn-comprar">Comprar</button>
         </div>
       </div>
 
-      <div class="catalogo-item">
-        <img src="celular4.jpg" alt="Celular 4">
+      <div class="catalogo-item" data-id="4">
+        <img src="celular4.jpg" alt="Celular HONOR X9c">
         <div class="catalogo-item-info">
           <h3>HONOR X9c</h3>
           <p>$9,999 MXN</p>
+          <button class="btn-comprar">Comprar</button>
         </div>
       </div>
 
-      <div class="catalogo-item">
-        <img src="celular5.jpg" alt="Celular 5">
+      <div class="catalogo-item" data-id="5">
+        <img src="celular5.jpg" alt="Celular Moto G85">
         <div class="catalogo-item-info">
           <h3>Moto G85</h3>
           <p>$5,299 MXN</p>
+          <button class="btn-comprar">Comprar</button>
         </div>
       </div>
 
-      <div class="catalogo-item">
-        <img src="celular6.jpg" alt="Celular 6">
+      <div class="catalogo-item" data-id="6">
+        <img src="celular6.jpg" alt="Celular HONOR 200">
         <div class="catalogo-item-info">
           <h3>HONOR 200</h3>
           <p>$7,999 MXN</p>
+          <button class="btn-comprar">Comprar</button>
         </div>
       </div>
 
-      <div class="catalogo-item">
-        <img src="celular7.jpg" alt="Celular 7">
+      <div class="catalogo-item" data-id="7">
+        <img src="celular7.jpg" alt="Celular Moto G24">
         <div class="catalogo-item-info">
           <h3>Moto G24</h3>
           <p>$10,999 MXN</p>
+          <button class="btn-comprar">Comprar</button>
         </div>
       </div>
 
-      <div class="catalogo-item">
-        <img src="celular8.jpg" alt="Celular 8">
+      <div class="catalogo-item" data-id="8">
+        <img src="celular8.jpg" alt="Celular Samsung A06">
         <div class="catalogo-item-info">
           <h3>Samsung A06</h3>
           <p>$3,799 MXN</p>
+          <button class="btn-comprar">Comprar</button>
         </div>
       </div>
 
-      <div class="catalogo-item">
-        <img src="celular9.jpg" alt="Celular 9">
+      <div class="catalogo-item" data-id="9">
+        <img src="celular9.jpg" alt="Celular Tecno spark 30c">
         <div class="catalogo-item-info">
           <h3>Tecno spark 30c</h3>
           <p>$3,499 MXN</p>
+          <button class="btn-comprar">Comprar</button>
         </div>
       </div>
 
-      <div class="catalogo-item">
-        <img src="celular10.jpg" alt="Celular 10">
+      <div class="catalogo-item" data-id="10">
+        <img src="celular10.jpg" alt="Celular Samsung Galaxy A05">
         <div class="catalogo-item-info">
           <h3>Samsung Galaxy A05</h3>
           <p>$3,199 MXN</p>
+          <button class="btn-comprar">Comprar</button>
         </div>
       </div>
 
@@ -123,6 +180,114 @@
       </div>
     </div>
   </footer>
+
+  <!-- Modal compra -->
+  <div id="modal-compra" class="modal">
+    <div class="modal-content">
+      <span id="modal-close" class="modal-close">&times;</span>
+      <h2 id="modal-titulo"></h2>
+      <p id="modal-especificaciones"></p>
+      <form id="form-compra">
+        <label for="nombre">Nombre:</label><br/>
+        <input type="text" id="nombre" required /><br/>
+        <label for="correo">Correo:</label><br/>
+        <input type="email" id="correo" required /><br/>
+        <label for="direccion">Dirección:</label><br/>
+        <textarea id="direccion" required></textarea><br/>
+        <button type="submit">Confirmar Compra</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const celulares = {
+      1: {
+        nombre: "TECNO Go spark Go1",
+        especificaciones: "Pantalla 6.52\", Cámara 8MP, Batería 5000mAh, RAM 2GB, Almacenamiento 32GB",
+        precio: "$3,899 MXN"
+      },
+      2: {
+        nombre: "Redmi Note 14",
+        especificaciones: "Pantalla 6.43\", Cámara 48MP, Batería 4500mAh, RAM 4GB, Almacenamiento 64GB",
+        precio: "$4,299 MXN"
+      },
+      3: {
+        nombre: "HONOR X8b",
+        especificaciones: "Pantalla 6.7\", Cámara 64MP, Batería 4000mAh, RAM 6GB, Almacenamiento 128GB",
+        precio: "$4,899 MXN"
+      },
+      4: {
+        nombre: "HONOR X9c",
+        especificaciones: "Pantalla 6.72\", Cámara 50MP, Batería 5000mAh, RAM 8GB, Almacenamiento 128GB",
+        precio: "$9,999 MXN"
+      },
+      5: {
+        nombre: "Moto G85",
+        especificaciones: "Pantalla 6.5\", Cámara 48MP, Batería 5000mAh, RAM 4GB, Almacenamiento 64GB",
+        precio: "$5,299 MXN"
+      },
+      6: {
+        nombre: "HONOR 200",
+        especificaciones: "Pantalla 6.67\", Cámara 48MP, Batería 5000mAh, RAM 6GB, Almacenamiento 128GB",
+        precio: "$7,999 MXN"
+      },
+      7: {
+        nombre: "Moto G24",
+        especificaciones: "Pantalla 6.5\", Cámara 48MP, Batería 5000mAh, RAM 4GB, Almacenamiento 64GB",
+        precio: "$10,999 MXN"
+      },
+      8: {
+        nombre: "Samsung A06",
+        especificaciones: "Pantalla 6.5\", Cámara 8MP, Batería 3000mAh, RAM 3GB, Almacenamiento 32GB",
+        precio: "$3,799 MXN"
+      },
+      9: {
+        nombre: "Tecno spark 30c",
+        especificaciones: "Pantalla 6.52\", Cámara 13MP, Batería 5000mAh, RAM 4GB, Almacenamiento 64GB",
+        precio: "$3,499 MXN"
+      },
+      10: {
+        nombre: "Samsung Galaxy A05",
+        especificaciones: "Pantalla 6.5\", Cámara 13MP, Batería 5000mAh, RAM 3GB, Almacenamiento 32GB",
+        precio: "$3,199 MXN"
+      }
+    };
+
+    const modal = document.getElementById('modal-compra');
+    const modalTitulo = document.getElementById('modal-titulo');
+    const modalEspecificaciones = document.getElementById('modal-especificaciones');
+    const modalClose = document.getElementById('modal-close');
+    const formCompra = document.getElementById('form-compra');
+
+    document.querySelectorAll('.btn-comprar').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.closest('.catalogo-item');
+        const id = item.getAttribute('data-id');
+        const celular = celulares[id];
+
+        modalTitulo.textContent = celular.nombre + " - " + celular.precio;
+        modalEspecificaciones.textContent = celular.especificaciones;
+        modal.style.display = 'flex';
+      });
+    });
+
+    modalClose.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', e => {
+      if(e.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+
+    formCompra.addEventListener('submit', e => {
+      e.preventDefault();
+      alert("¡Compra confirmada!\nGracias por tu compra, " + document.getElementById('nombre').value + ".");
+      modal.style.display = 'none';
+      formCompra.reset();
+    });
+  </script>
 
 </body>
 </html>

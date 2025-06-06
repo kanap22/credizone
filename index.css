@@ -71,23 +71,22 @@ nav ul li a.active {
   color: black;
 }
 
+/* Carrusel con animación lenta */
+@keyframes scrollCarousel {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 .carrusel {
-  width: 100%;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  white-space: nowrap;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  cursor: grab;
-  margin-top: 1rem;
-  padding-bottom: 1rem;
+  display: flex;
+  overflow: hidden;
   background-color: #e6ffe6;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.carrusel::-webkit-scrollbar {
-  display: none;
+  cursor: grab;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  animation: scrollCarousel 40s linear infinite;
 }
 
 .carrusel img {

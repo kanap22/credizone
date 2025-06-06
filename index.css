@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,431 +7,378 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f5f5f5;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
 }
 
 header {
-  background-color: #2e7d32;
+  background-color: #006400;
   color: white;
-  padding: 20px;
+  padding: 1rem 2rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo-container h1 {
-  font-weight: 900;
+  font-weight: 700;
   font-size: 1.8rem;
 }
 
 .logo-container .dot {
-  color: #a5d6a7;
+  color: #32CD32;
 }
 
 .logo-container .tizayuca-black {
-  font-weight: 900;
   color: black;
+  font-weight: 700;
+}
+
+.logo-container p {
+  font-size: 1rem;
+  margin-top: 0.2rem;
+}
+
+.highlight {
+  color: #32CD32;
+  font-weight: 700;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 1.5rem;
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s ease;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
-  color: #a5d6a7;
+  background-color: #32CD32;
+  color: black;
 }
 
-.catalogo {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 20px;
+.carrusel {
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  cursor: grab;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #e6ffe6;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.catalogo h2 {
-  color: #2e7d32;
-  font-size: 2rem;
-  margin-bottom: 25px;
-  text-align: center;
+.carrusel::-webkit-scrollbar {
+  display: none;
 }
 
-.catalogo-lista {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  gap: 20px;
-}
-
-.catalogo-item {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.carrusel img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 10px;
+  user-select: none;
   transition: transform 0.3s ease;
 }
 
-.catalogo-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 15px rgba(46,125,50,0.3);
-}
-
-.catalogo-item img {
-  width: 100%;
-  height: auto;
-  max-height: 200px;
-  object-fit: contain;
-  margin-bottom: 15px;
-  border-radius: 8px;
-}
-
-.catalogo-item-info h3 {
-  font-size: 1.2rem;
-  color: #2e7d32;
-  margin-bottom: 8px;
-  text-align: center;
-}
-
-.catalogo-item-info p {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #4caf50;
-  margin-bottom: 12px;
-  text-align: center;
-}
-
-.btn-comprar {
-  background-color: #2e7d32;
-  color: white;
-  padding: 10px 18px;
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
+.carrusel img:hover {
+  transform: scale(1.1);
   cursor: pointer;
+}
+
+.promociones {
+  padding: 2rem;
+  background-color: white;
+  margin-top: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.promociones h2 {
+  text-align: center;
+  color: #006400;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.promociones-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.promo-item {
+  background-color: #f0fff0;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  padding: 1rem;
+  width: 300px;
+  text-align: center;
+  position: relative;
+}
+
+.promo-item img {
   width: 100%;
+  border-radius: 8px;
+}
+
+.promo-item h3 {
+  margin-top: 0.8rem;
+  color: #006400;
+}
+
+.promo-item p {
+  margin: 0.5rem 0 1rem 0;
+  color: #444;
+}
+
+.ver-mas-btn {
+  background-color: #32CD32;
+  color: black;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-weight: 700;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.btn-comprar:hover {
-  background-color: #1b4d1a;
+.ver-mas-btn:hover {
+  background-color: #228B22;
+  color: white;
 }
 
-a[style] {
-  display: inline-block;
-  background-color: #2e7d32;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: 600;
-  margin-top: 20px;
+.promo-detalles {
+  margin-top: 1rem;
+  text-align: left;
+  font-size: 0.9rem;
+  color: #006400;
+}
+
+.promo-detalles ul {
+  padding-left: 1rem;
+}
+
+.promo-detalles li {
+  margin-bottom: 0.4rem;
+}
+
+.testimonios {
+  background-color: #e6ffe6;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.testimonios h2 {
+  text-align: center;
+  color: #006400;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.testimonios-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.testimonio-item {
+  background-color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  width: 280px;
+  font-style: italic;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: relative;
+  color: #444;
+}
+
+.testimonio-item span {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 700;
+  text-align: right;
+  color: #006400;
+}
+
+.ventajas {
+  background-color: white;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.ventajas h2 {
+  text-align: center;
+  color: #006400;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.ventajas-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.ventaja-item {
+  width: 280px;
   text-align: center;
 }
 
-/* Pie de página */
-footer {
-  background-color: #2e7d32;
+.ventaja-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 0.8rem;
+}
+
+.ventaja-item h3 {
+  color: #228B22;
+  margin-bottom: 0.5rem;
+}
+
+.ventaja-item p {
+  color: #555;
+}
+
+.contact-section {
+  background-color: #e6ffe6;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  color: #006400;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.contact-section p {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.contact-section form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-section input,
+.contact-section textarea {
+  padding: 0.7rem 1rem;
+  border: 2px solid #32CD32;
+  border-radius: 25px;
+  font-size: 1rem;
+  resize: none;
+}
+
+.contact-section textarea {
+  height: 80px;
+}
+
+.contact-section button {
+  background-color: #32CD32;
+  color: black;
+  border: none;
+  padding: 0.7rem;
+  font-weight: 700;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-section button:hover {
+  background-color: #228B22;
   color: white;
-  padding: 15px 20px;
+}
+
+footer {
+  background-color: #006400;
+  color: white;
+  padding: 2rem;
+  margin-top: 3rem;
   text-align: center;
   font-size: 0.9rem;
 }
 
-.footer-simple .social-links a {
-  color: #a5d6a7;
+.footer-simple p {
+  margin: 0.3rem 0;
+}
+
+.footer-simple a {
+  color: #32CD32;
   text-decoration: none;
-  margin: 0 8px;
-  font-weight: 600;
 }
 
-.footer-simple .social-links a:hover {
-  color: white;
+.footer-simple a:hover {
+  text-decoration: underline;
 }
 
-/* Modal compra */
-.modal {
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(0,0,0,0.5);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.modal-content {
-  background: white;
-  padding: 20px;
-  border-radius: 5px;
-  max-width: 400px;
-  width: 90%;
-  box-sizing: border-box;
-}
-
-.modal-close {
-  float: right;
-  cursor: pointer;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.modal-close:hover {
-  color: red;
-}
-
-#form-compra input, #form-compra textarea {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 5px;
-  box-sizing: border-box;
-}
-
-#form-compra button {
-  background-color: #2e7d32;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-#form-compra button:hover {
-  background-color: #1b4d1a;
-}
-
-/* Carrusel */
-.carrusel {
-  max-width: 1100px;
-  margin: 20px auto;
-  overflow: hidden;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-}
-
-.carrusel-contenedor {
+.social-links {
+  margin-top: 1rem;
   display: flex;
-  animation: slide 30s linear infinite;
-}
-
-.carrusel-contenedor img {
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-
-@keyframes slide {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-2600px); }
-}
-
-/* Promociones */
-.promociones {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 20px;
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
   justify-content: center;
+  gap: 1.5rem;
 }
 
-.promocion {
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  flex: 1 1 300px;
-  padding: 20px;
-  position: relative;
-  transition: box-shadow 0.3s ease;
-}
-
-.promocion:hover {
-  box-shadow: 0 0 20px rgba(46,125,50,0.4);
-}
-
-.promocion h3 {
-  color: #2e7d32;
-  margin-bottom: 10px;
-}
-
-.promocion p {
-  color: #555;
-  margin-bottom: 15px;
-}
-
-.promocion .btn-vermas {
-  background-color: #2e7d32;
-  color: white;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.promocion .btn-vermas:hover {
-  background-color: #1b4d1a;
-}
-
-/* Testimonios */
-.testimonios {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 20px;
-  text-align: center;
-}
-
-.testimonios h2 {
-  color: #2e7d32;
-  margin-bottom: 30px;
-}
-
-.testimonio {
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
-  padding: 25px;
-  font-style: italic;
-  color: #444;
-}
-
-.testimonio strong {
-  display: block;
-  margin-top: 10px;
+.social-links a {
+  color: #32CD32;
   font-weight: 700;
-  color: #2e7d32;
+  text-decoration: none;
 }
 
-/* Ventajas */
-.ventajas {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 20px;
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
+.social-links a:hover {
+  color: #228B22;
 }
 
-.ventaja {
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  flex: 1 1 250px;
-  padding: 20px;
-  text-align: center;
-}
-
-.ventaja h3 {
-  color: #2e7d32;
-  margin-bottom: 15px;
-}
-
-.ventaja p {
-  color: #555;
-}
-
-/* Formulario contacto */
-.formulario-contacto {
-  max-width: 700px;
-  margin: 40px auto 60px;
-  padding: 0 20px;
-}
-
-.formulario-contacto h2 {
-  color: #2e7d32;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.formulario-contacto form {
-  background: white;
-  border-radius: 15px;
-  padding: 25px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.formulario-contacto label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: 600;
-  color: #2e7d32;
-}
-
-.formulario-contacto input,
-.formulario-contacto textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-}
-
-.formulario-contacto button {
-  background-color: #2e7d32;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  font-size: 1rem;
-  font-weight: 700;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 100%;
-}
-
-.formulario-contacto button:hover {
-  background-color: #1b4d1a;
-}
-
-/* Catálogo - Modificaciones específicas para imágenes */
-.catalogo-item img {
-  width: 100%;
-  max-height: 200px;
-  object-fit: contain;
-  border-radius: 8px;
-}
-
-/* Responsive */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
-    gap: 10px;
+    gap: 0.7rem;
   }
 
-  .catalogo-lista {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .promociones {
+  .promociones-grid,
+  .testimonios-grid,
+  .ventajas-grid {
     flex-direction: column;
+    align-items: center;
   }
 
-  .ventajas {
-    flex-direction: column;
+  .promo-item, .testimonio-item, .ventaja-item {
+    width: 90%;
   }
-}
 
-@media (max-width: 480px) {
-  .catalogo-lista {
-    grid-template-columns: 1fr;
+  .contact-section form {
+    width: 90%;
   }
 }

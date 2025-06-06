@@ -5,7 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CrediZone Tizayuca</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="index.css" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .carrusel {
+      position: relative;
+      width: 100%;
+      height: 600px;
+      overflow: hidden;
+      background-color: #f0f0f0;
+    }
+
+    .carrusel-contenedor {
+      position: relative;
+      height: 100%;
+    }
+
+    .carrusel-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 0;
+    }
+
+    .carrusel-slide.active {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .carrusel-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  </style>
 </head>
 <body>
 
@@ -119,7 +163,7 @@
 
   <footer>
     <div class="footer-simple">
-      <p>© 2025 CrediZone Tizayuca. Todos los derechos reservados.</p>
+      <p>©️ 2025 CrediZone Tizayuca. Todos los derechos reservados.</p>
       <p>Calle Francisco Boca Negra, Col. Centro, Tizayuca, Hidalgo, México</p>
       <p>Horario: Lunes a Viernes, 9:00 AM - 6:00 PM</p>
       <p>Correo: <a href="mailto:contacto@credizone.com">contacto@credizone.com</a></p>
@@ -131,6 +175,20 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    const slides = document.querySelectorAll(".carrusel-slide");
+    let index = 0;
+
+    function mostrarSiguienteSlide() {
+      slides[index].classList.remove("active");
+      index = (index + 1) % slides.length;
+      slides[index].classList.add("active");
+    }
+
+    slides[0].classList.add("active");
+    setInterval(mostrarSiguienteSlide, 3000);
+  </script>
 
 </body>
 </html>

@@ -1,58 +1,162 @@
-[7:19 p.m., 5/6/2025] KANA: <!DOCTYPE html>
+[7:31 p.m., 5/6/2025] KANA: <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CrediZone Tizayuca</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
 
-    .carrusel {
-      position: relative;
-      width: 100%;
-      height: 600px;
-      overflow: hidden;
-      background-color: #f0f0f0;
-    }
+  <header>
+    <div class="logo-container">
+      <h1>CREDI<span class="dot">·</span>ZONE <span class="tizayuca-black">Tizayuca</span></h1>
+      <p>Celulares <span class="highlight">a crédito</span></p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="quienes somos.html">Quiénes somos</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="requisitos.html">Requisitos</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    .carrusel-contenedor {
-      position: relative;
-      height: 100%;
-    }
+  <section class="carrusel">
+    <div class="carrusel-contenedor">
+      <div class="carrusel-slide"><img src="oferta1.jpg" alt="Oferta 1"></div>
+      <div class="carrusel-slide"><img src="oferta2.jpg" alt="Oferta 2"></div>
+      <div class="carrusel-slide"><img src="oferta3.jpg" alt="Oferta 3"></div>
+      <div class="carrusel-slide"><img src="oferta4.jpg" alt="Oferta 4"></div>
+      <div class="carrusel-slide"><img src="oferta5.jpg" alt="Oferta 5"></div>
+      <div class="carrusel-slide"><img src="oferta6.jpg" alt="Oferta 6"></div>
+      <div class="carrusel-slide"><img src="oferta7.jpg" alt="Oferta 7"></div>
+      <div class="carrusel-slide"><img src="oferta8.jpg" alt="Oferta 8"></div>
+      <div class="carrusel-slide"><img src="oferta9.jpg" alt="Oferta 9"></div>
+      <div class="carrusel-slide"><img src="oferta10.jpg" alt="Oferta 10"></div>
+      <div class="carrusel-slide"><img src="oferta11.jpg" alt="Oferta 11"></div>
+      <div class="carrusel-slide"><img src="oferta12.jpg" alt="Oferta 12"></div>
+      <div class="carrusel-slide"><img src="oferta13.jpg" alt="Oferta 13"></div>
+    </div>
+  </section>
 
-    .carrusel-slide {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition:…
-[7:23 p.m., 5/6/2025] KANA: body, h1, h2, h3, p, ul, li, nav, header, section, footer, form, input, textarea, button {
+  <section class="promociones">
+    <h2>Promociones Destacadas</h2>
+    <div class="promociones-grid">
+      <div class="promo-item">
+        <img src="promo1.jpg" alt="Promo 1" />
+        <h3>HONOR 200 lite</h3>
+        <p>¡Compra ahora y obtén descuento especial!</p>
+        <button>Ver más</button>
+      </div>
+      <div class="promo-item">
+        <img src="promo2.jpg" alt="Promo 2" />
+        <h3>Redmi 14C</h3>
+        <p>Financiamiento a 12 meses sin intereses.</p>
+        <button>Ver más</button>
+      </div>
+      <div class="promo-item">
+        <img src="promo3.jpg" alt="Promo 3" />
+        <h3>HONOR X7b</h3>
+        <p>Hasta 10 % de descuento en el segundo equipo.</p>
+        <button>Ver más</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonios">
+    <h2>Testimonios de Clientes</h2>
+    <div class="testimonios-grid">
+      <div class="testimonio-item">
+        "Excelente servicio y asesoría. Me ayudaron a elegir el mejor plan."
+        <span>- María G.</span>
+      </div>
+      <div class="testimonio-item">
+        "Rápido y confiable. Recomiendo mucho CrediZone Tizayuca."
+        <span>- Juan P.</span>
+      </div>
+      <div class="testimonio-item">
+        "Muy buena atención y precios accesibles. ¡Gracias!"
+        <span>- Ana R.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="ventajas">
+    <h2>Ventajas de Comprar con Nosotros</h2>
+    <div class="ventajas-grid">
+      <div class="ventaja-item">
+        <img src="ventaja1.jpg" alt="Ventaja 1" />
+        <h3>Facilidad de pago</h3>
+        <p>Planes adaptados a tu presupuesto.</p>
+      </div>
+      <div class="ventaja-item">
+        <img src="ventaja2.jpg" alt="Ventaja 2" />
+        <h3>Productos garantizados</h3>
+        <p>Calidad y respaldo en cada compra.</p>
+      </div>
+      <div class="ventaja-item">
+        <img src="ventaja3.jpg" alt="Ventaja 3" />
+        <h3>Atención personalizada</h3>
+        <p>Estamos para ayudarte en todo momento.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <h2>Conversemos</h2>
+    <p>Deja tus datos y te contactamos para asesorarte.</p>
+    <form>
+      <input type="text" placeholder="Nombre completo" required />
+      <input type="tel" placeholder="Teléfono" required />
+      <input type="email" placeholder="Correo electrónico" />
+      <textarea placeholder="¿Qué modelo te interesa?"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-simple">
+      <p>©️ 2025 CrediZone Tizayuca. Todos los derechos reservados.</p>
+      <p>Calle Francisco Boca Negra, Col. Centro, Tizayuca, Hidalgo, México</p>
+      <p>Horario: Lunes a Viernes, 9:00 AM - 6:00 PM</p>
+      <p>Correo: <a href="mailto:contacto@credizone.com">contacto@credizone.com</a></p>
+      <p><em>Tu crédito confiable para celulares</em></p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/credizone" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/credizone" target="_blank">Instagram</a>
+        <a href="https://wa.me/5210000000000" target="_blank">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+[7:34 p.m., 5/6/2025] KANA: @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  background: #fff;
-  color: #222;
-  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
 }
 
 header {
-  background-color: #004080;
-  color: white;
+  background-color: #004aad;
+  color: #fff;
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .logo-container h1 {
@@ -61,185 +165,191 @@ header {
 }
 
 .dot {
-  color: #ff5722;
+  color: #f48c06;
 }
 
 .tizayuca-black {
   font-weight: 900;
+  color: #000;
+}
+
+.logo-container p {
+  font-weight: 400;
+  font-size: 1rem;
 }
 
 .highlight {
-  color: #ff5722;
+  color: #f48c06;
+  font-weight: 700;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 nav ul li a {
-  color: white;
+  color: #fff;
   text-decoration: none;
-  font-weight: 500;
-  padding: 8px 12px;
+  font-weight: 600;
+  padding: 6px 12px;
   border-radius: 4px;
   transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
-  background-color: #ff5722;
-  color: white;
+  background-color: #f48c06;
+  color: #000;
 }
 
 .carrusel {
-  position: relative;
   width: 100%;
-  height: 600px;
   overflow: hidden;
-  background-color: #f0f0f0;
+  margin: 20px 0;
 }
 
 .carrusel-contenedor {
-  position: relative;
-  height: 100%;
+  display: flex;
+  width: calc(13 * 100%);
+  animation: slide 39s linear infinite;
 }
 
 .carrusel-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 0;
-}
-
-.carrusel-slide.active {
-  opacity: 1;
-  z-index: 1;
+  flex: 0 0 calc(100% / 13);
 }
 
 .carrusel-slide img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: auto;
+  display: block;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-92.3%);
+  }
 }
 
 .promociones {
-  padding: 40px 20px;
-  background-color: #fafafa;
-  text-align: center;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
 .promociones h2 {
+  text-align: center;
   font-size: 2rem;
-  margin-bottom: 30px;
-  color: #004080;
+  margin-bottom: 25px;
+  color: #004aad;
 }
 
 .promociones-grid {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.promo-item {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
-  padding: 20px;
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.promo-item img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 15px;
-}
-
-.promo-item h3 {
-  color: #004080;
-  margin-bottom: 10px;
-}
-
-.promo-item p {
-  font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 15px;
-}
-
-.promo-item button {
-  background-color: #ff5722;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-weight: 700;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.promo-item button:hover {
-  background-color: #e64a19;
-}
-
-.testimonios {
-  background-color: #e3f2fd;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.testimonios h2 {
-  color: #004080;
-  font-size: 2rem;
-  margin-bottom: 30px;
-}
-
-.testimonios-grid {
   display: flex;
   gap: 25px;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.testimonio-item {
-  background: white;
+.promo-item {
+  background-color: #fff;
   border-radius: 10px;
-  padding: 25px 20px;
-  width: 300px;
-  box-shadow: 0 3px 7px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  max-width: 350px;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.promo-item:hover {
+  transform: translateY(-8px);
+}
+
+.promo-item img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.promo-item h3 {
+  color: #004aad;
+  margin: 15px 0 10px;
+  font-size: 1.3rem;
+}
+
+.promo-item p {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.promo-item button {
+  background-color: #f48c06;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 6px;
+  font-weight: 700;
+  color: #000;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.promo-item button:hover {
+  background-color: #e07b00;
+}
+
+.testimonios {
+  background-color: #e7f1ff;
+  padding: 40px 20px;
+}
+
+.testimonios h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #004aad;
+  margin-bottom: 30px;
+}
+
+.testimonios-grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.testimonio-item {
+  max-width: 320px;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
   font-style: italic;
   color: #333;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
   position: relative;
 }
 
 .testimonio-item span {
   display: block;
   margin-top: 15px;
+  font-style: normal;
   font-weight: 700;
-  color: #004080;
-  text-align: right;
+  color: #004aad;
 }
 
 .ventajas {
-  padding: 40px 20px;
-  background: #fff;
-  text-align: center;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
 }
 
 .ventajas h2 {
-  color: #004080;
+  text-align: center;
   font-size: 2rem;
+  color: #004aad;
   margin-bottom: 30px;
 }
 
@@ -251,44 +361,50 @@ nav ul li a.active {
 }
 
 .ventaja-item {
-  width: 300px;
-  background: #f5f5f5;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 30px 25px;
+  max-width: 300px;
   text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.ventaja-item:hover {
+  transform: translateY(-10px);
 }
 
 .ventaja-item img {
-  width: 100px;
-  margin-bottom: 15px;
+  width: 80px;
+  margin-bottom: 20px;
 }
 
 .ventaja-item h3 {
-  color: #004080;
-  margin-bottom: 10px;
+  color: #004aad;
+  font-size: 1.4rem;
+  margin-bottom: 12px;
 }
 
 .ventaja-item p {
-  color: #444;
   font-size: 1rem;
+  color: #555;
 }
 
 .contact-section {
-  background: #004080;
-  color: white;
+  background-color: #004aad;
+  color: #fff;
   padding: 40px 20px;
   text-align: center;
 }
 
 .contact-section h2 {
   font-size: 2rem;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .contact-section p {
-  margin-bottom: 25px;
   font-size: 1.1rem;
+  margin-bottom: 25px;
 }
 
 .contact-section form {
@@ -302,46 +418,48 @@ nav ul li a.active {
 .contact-section input,
 .contact-section textarea {
   padding: 12px 15px;
+  border-radius: 8px;
   border: none;
-  border-radius: 6px;
   font-size: 1rem;
 }
 
 .contact-section textarea {
   resize: vertical;
-  min-height: 100px;
+  min-height: 80px;
 }
 
 .contact-section button {
-  background-color: #ff5722;
-  color: white;
+  background-color: #f48c06;
   border: none;
-  font-weight: 700;
   padding: 14px;
-  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 8px;
   cursor: pointer;
+  color: #000;
   transition: background-color 0.3s ease;
 }
 
 .contact-section button:hover {
-  background-color: #e64a19;
+  background-color: #e07b00;
 }
 
 footer {
   background-color: #222;
   color: #ccc;
-  padding: 25px 20px;
+  padding: 30px 20px;
   text-align: center;
+}
+
+footer p {
+  margin-bottom: 8px;
   font-size: 0.9rem;
 }
 
-.footer-simple p {
-  margin-bottom: 8px;
-}
-
-.footer-simple a {
-  color: #ff5722;
+footer a {
+  color: #f48c06;
   text-decoration: none;
+  font-weight: 600;
 }
 
 .social-links {
@@ -349,12 +467,29 @@ footer {
 }
 
 .social-links a {
-  margin: 0 10px;
-  color: #ff5722;
+  margin: 0 12px;
+  color: #f48c06;
   text-decoration: none;
   font-weight: 700;
+  font-size: 1.1rem;
 }
 
 .social-links a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+  nav ul {
+    gap: 18px;
+  }
+  .promociones-grid, .testimonios-grid, .ventajas-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .promo-item, .testimonio-item, .ventaja-item {
+    max-width: 90%;
+  }
 }

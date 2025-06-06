@@ -1,56 +1,99 @@
+[7:19 p.m., 5/6/2025] KANA: <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CrediZone Tizayuca</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-  font-family: 'Poppins', sans-serif;
+    .carrusel {
+      position: relative;
+      width: 100%;
+      height: 600px;
+      overflow: hidden;
+      background-color: #f0f0f0;
+    }
+
+    .carrusel-contenedor {
+      position: relative;
+      height: 100%;
+    }
+
+    .carrusel-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition:…
+[7:23 p.m., 5/6/2025] KANA: body, h1, h2, h3, p, ul, li, nav, header, section, footer, form, input, textarea, button {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #222;
+  line-height: 1.5;
 }
 
 header {
-  background-color: #2e7d32;
+  background-color: #004080;
   color: white;
-  padding: 20px;
+  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .logo-container h1 {
-  margin: 0;
-  font-size: 28px;
+  font-weight: 700;
+  font-size: 1.8rem;
 }
 
 .dot {
-  color: yellow;
+  color: #ff5722;
 }
 
 .tizayuca-black {
-  color: black;
+  font-weight: 900;
 }
 
 .highlight {
-  font-weight: bold;
-  color: #c8e6c9;
+  color: #ff5722;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 15px;
-  padding: 0;
-  margin: 0;
+  gap: 25px;
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
-nav ul li a.active,
-nav ul li a:hover {
-  text-decoration: underline;
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #ff5722;
+  color: white;
 }
 
-.carousel {
+.carrusel {
   position: relative;
   width: 100%;
   height: 600px;
@@ -58,32 +101,31 @@ nav ul li a:hover {
   background-color: #f0f0f0;
 }
 
-.carousel-container {
+.carrusel-contenedor {
   position: relative;
   height: 100%;
 }
 
-.carousel-slide {
+.carrusel-slide {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   opacity: 0;
-  transform: translateX(100%);
-  transition: all 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 0;
 }
 
-.carousel-slide.active {
+.carrusel-slide.active {
   opacity: 1;
-  transform: translateX(0) scale(1.05);
   z-index: 1;
 }
 
-.carousel-slide img {
+.carrusel-slide img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -91,363 +133,228 @@ nav ul li a:hover {
 
 .promociones {
   padding: 40px 20px;
-  background-color: #e8f5e9;
+  background-color: #fafafa;
   text-align: center;
 }
 
 .promociones h2 {
-  font-size: 28px;
+  font-size: 2rem;
   margin-bottom: 30px;
-  color: #2e7d32;
+  color: #004080;
 }
 
 .promociones-grid {
   display: flex;
-  justify-content: center;
   gap: 30px;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .promo-item {
   background: white;
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
-  width: 280px;
   padding: 20px;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
-.promo-item:hover {
-  transform: translateY(-10px);
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .promo-item img {
   width: 100%;
-  border-radius: 6px;
+  border-radius: 8px;
   margin-bottom: 15px;
 }
 
 .promo-item h3 {
-  margin: 0 0 10px;
-  color: #1b5e20;
+  color: #004080;
+  margin-bottom: 10px;
 }
 
 .promo-item p {
-  font-size: 15px;
+  font-size: 0.95rem;
+  color: #555;
   margin-bottom: 15px;
-  color: #4caf50;
 }
 
 .promo-item button {
-  background-color: #2e7d32;
+  background-color: #ff5722;
   color: white;
   border: none;
-  padding: 10px 15px;
-  border-radius: 4px;
-  font-weight: 600;
+  padding: 10px 20px;
+  font-weight: 700;
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .promo-item button:hover {
-  background-color: #1b5e20;
+  background-color: #e64a19;
 }
 
 .testimonios {
+  background-color: #e3f2fd;
   padding: 40px 20px;
-  background-color: #f1f8e9;
   text-align: center;
 }
 
 .testimonios h2 {
-  font-size: 28px;
+  color: #004080;
+  font-size: 2rem;
   margin-bottom: 30px;
-  color: #558b2f;
 }
 
 .testimonios-grid {
   display: flex;
-  justify-content: center;
   gap: 25px;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .testimonio-item {
   background: white;
-  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
-  border-radius: 8px;
-  padding: 25px;
-  max-width: 320px;
+  border-radius: 10px;
+  padding: 25px 20px;
+  width: 300px;
+  box-shadow: 0 3px 7px rgba(0,0,0,0.1);
   font-style: italic;
-  color: #33691e;
+  color: #333;
+  position: relative;
 }
 
 .testimonio-item span {
   display: block;
   margin-top: 15px;
   font-weight: 700;
-  font-style: normal;
-  color: #2e7d32;
+  color: #004080;
+  text-align: right;
 }
 
 .ventajas {
   padding: 40px 20px;
-  background-color: #dcedc8;
+  background: #fff;
   text-align: center;
 }
 
 .ventajas h2 {
-  font-size: 28px;
+  color: #004080;
+  font-size: 2rem;
   margin-bottom: 30px;
-  color: #33691e;
 }
 
 .ventajas-grid {
   display: flex;
-  justify-content: center;
   gap: 30px;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .ventaja-item {
-  background: white;
+  width: 300px;
+  background: #f5f5f5;
   padding: 20px;
-  max-width: 280px;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
-  cursor: default;
-  transition: box-shadow 0.3s ease;
-}
-
-.ventaja-item:hover {
-  box-shadow: 0 6px 20px rgb(0 0 0 / 0.15);
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+  text-align: center;
 }
 
 .ventaja-item img {
-  width: 60px;
+  width: 100px;
   margin-bottom: 15px;
 }
 
 .ventaja-item h3 {
-  margin: 0 0 10px;
-  color: #558b2f;
+  color: #004080;
+  margin-bottom: 10px;
 }
 
 .ventaja-item p {
-  font-size: 15px;
-  color: #558b2f;
-  margin: 0;
+  color: #444;
+  font-size: 1rem;
 }
 
 .contact-section {
+  background: #004080;
+  color: white;
   padding: 40px 20px;
   text-align: center;
-  background-color: #f8f8f8;
 }
 
 .contact-section h2 {
-  margin-bottom: 10px;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.contact-section p {
+  margin-bottom: 25px;
+  font-size: 1.1rem;
 }
 
 .contact-section form {
   max-width: 500px;
   margin: 0 auto;
-  display: grid;
-  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .contact-section input,
 .contact-section textarea {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.contact-section textarea {
+  resize: vertical;
+  min-height: 100px;
 }
 
 .contact-section button {
-  padding: 10px;
-  font-size: 16px;
-  background-color: #2e7d32;
+  background-color: #ff5722;
   color: white;
   border: none;
+  font-weight: 700;
+  padding: 14px;
+  border-radius: 6px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-section button:hover {
+  background-color: #e64a19;
 }
 
 footer {
   background-color: #222;
-  color: white;
-  padding: 20px;
+  color: #ccc;
+  padding: 25px 20px;
   text-align: center;
-  font-size: 14px;
-}
-
-.footer-simple {
-  max-width: 1200px;
-  margin: 0 auto;
+  font-size: 0.9rem;
 }
 
 .footer-simple p {
-  margin: 6px 0;
-}
-
-.footer-simple p em {
-  color: #4caf50;
-  font-style: normal;
-  font-weight: 600;
+  margin-bottom: 8px;
 }
 
 .footer-simple a {
-  color: #ccc;
+  color: #ff5722;
   text-decoration: none;
-  font-weight: 600;
-}
-
-.footer-simple a:hover {
-  color: #4caf50;
-  text-decoration: underline;
 }
 
 .social-links {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .social-links a {
-  color: #ccc;
+  margin: 0 10px;
+  color: #ff5722;
   text-decoration: none;
-  margin: 0 12px;
-  font-weight: 600;
-  transition: color 0.3s ease;
+  font-weight: 700;
 }
 
 .social-links a:hover {
-  color: #4caf50;
   text-decoration: underline;
-}
-
-.catalogo {
-  padding: 40px 20px;
-  background-color: #f1f8e9;
-  text-align: center;
-}
-
-.catalogo h2 {
-  font-size: 28px;
-  color: #2e7d32;
-  margin-bottom: 30px;
-}
-
-.catalogo-lista {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.catalogo-item {
-  background: white;
-  border-radius: 8px;
-  padding: 15px;
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.catalogo-item img {
-  width: 120px;
-  height: auto;
-  border-radius: 6px;
-  object-fit: contain;
-}
-
-.catalogo-item-info h3 {
-  margin: 0;
-  font-size: 20px;
-  color: #1b5e20;
-}
-
-.catalogo-item-info p {
-  margin: 5px 0;
-  color: #4caf50;
-  font-weight: 500;
-}
-
-.catalogo-item button.comprar-btn {
-  background-color: #2e7d32;
-  color: white;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 4px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-left: auto;
-}
-
-.catalogo-item button.comprar-btn:hover {
-  background-color: #1b5e20;
-}
-
-.catalogo-item-info .especificaciones {
-  margin-top: 10px;
-  background-color: #e8f5e9;
-  padding: 10px;
-  border-radius: 6px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-  color: #2e7d32;
-  font-size: 14px;
-  line-height: 1.3;
-}
-
-.modal-compra {
-  display: none;
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0,0,0,0.5);
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-.modal-compra.active {
-  display: flex;
-}
-
-.modal-compra-content {
-  background: white;
-  border-radius: 8px;
-  padding: 20px 30px;
-  max-width: 400px;
-  width: 90%;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-}
-
-.modal-compra-content h3 {
-  margin-top: 0;
-  color: #2e7d32;
-}
-
-.modal-compra-content p {
-  margin-bottom: 10px;
-  font-size: 14px;
-  color: #444;
-}
-
-.modal-compra-content button.cerrar-btn {
-  background-color: #c62828;
-  color: white;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 4px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.modal-compra-content button.cerrar-btn:hover {
-  background-color: #b71c1c;
 }

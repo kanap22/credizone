@@ -80,7 +80,7 @@ nav ul li a.active {
 
 .carrusel img.active {
   display: block;
-  animation: fadeIn 6s ease forwards;
+  animation: fadeIn 1.5s ease forwards;
 }
 
 @keyframes fadeIn {
@@ -100,6 +100,73 @@ nav ul li a.active {
 .promociones h2 {
   color: #2e7d32;
   margin-bottom: 15px;
+  text-align: center;
+}
+
+.promociones-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.promo-item {
+  flex: 1 1 28%;
+  background: #e8f5e9;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 0 8px rgb(0 0 0 / 0.1);
+  position: relative;
+  text-align: center;
+}
+
+.promo-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  user-select: none;
+  object-fit: contain;
+}
+
+.promo-item h3 {
+  color: #2e7d32;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.promo-item p {
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #4a7c35;
+}
+
+.promo-item button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.promo-item button:hover {
+  background-color: #84bc3d;
+  color: black;
+}
+
+.promo-specs {
+  margin-top: 10px;
+  background-color: #d0e8c4;
+  padding: 10px;
+  border-radius: 6px;
+  color: #1b4d1a;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: none;
+  text-align: left;
 }
 
 .testimonios {
@@ -111,6 +178,39 @@ nav ul li a.active {
   box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
 }
 
+.testimonios h2 {
+  color: #2e7d32;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.testimonios-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.testimonio-item {
+  background: #e8f5e9;
+  padding: 15px;
+  border-radius: 8px;
+  flex: 1 1 30%;
+  box-shadow: 0 0 8px rgb(0 0 0 / 0.1);
+  font-style: italic;
+  color: #4a7c35;
+  position: relative;
+}
+
+.testimonio-item span {
+  display: block;
+  margin-top: 12px;
+  font-weight: 700;
+  font-style: normal;
+  color: #2e7d32;
+  text-align: right;
+}
+
 .ventajas {
   background-color: white;
   max-width: 900px;
@@ -120,85 +220,101 @@ nav ul li a.active {
   box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
 }
 
-.catalogo {
-  max-width: 1000px;
-  margin: 40px auto;
-  background-color: white;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
-}
-
-.catalogo h2 {
+.ventajas h2 {
   color: #2e7d32;
-  margin-bottom: 25px;
-  font-weight: 700;
-  font-size: 2rem;
+  margin-bottom: 15px;
   text-align: center;
 }
 
-.catalogo-lista {
+.ventajas-grid {
   display: flex;
+  justify-content: space-between;
+  gap: 15px;
   flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
 }
 
-.catalogo-item {
+.ventaja-item {
+  flex: 1 1 30%;
   background: #e8f5e9;
-  border: 2px solid #84bc3d;
-  border-radius: 10px;
-  width: 220px;
+  border-radius: 8px;
   padding: 15px;
   box-shadow: 0 0 8px rgb(0 0 0 / 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: transform 0.3s ease;
+  text-align: center;
 }
 
-.catalogo-item:hover {
-  transform: scale(1.05);
-  border-color: #2e7d32;
-}
-
-.catalogo-item img {
-  width: 180px;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 12px;
-  object-fit: contain;
+.ventaja-item img {
+  max-width: 100px;
+  margin-bottom: 10px;
   user-select: none;
+  object-fit: contain;
 }
 
-.catalogo-item-info h3 {
+.ventaja-item h3 {
   color: #2e7d32;
   font-weight: 700;
-  margin-bottom: 6px;
-  text-align: center;
-  font-size: 1.1rem;
+  margin-bottom: 8px;
 }
 
-.catalogo-item-info p {
+.ventaja-item p {
   font-weight: 600;
-  margin-bottom: 12px;
   color: #4a7c35;
+}
+
+.contact-section {
+  background-color: white;
+  max-width: 900px;
+  margin: 30px auto 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
   text-align: center;
 }
 
-.btn-comprar {
+.contact-section h2 {
+  color: #2e7d32;
+  margin-bottom: 15px;
+}
+
+.contact-section p {
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #4a7c35;
+}
+
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.contact-section input,
+.contact-section textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #84bc3d;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.contact-section textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.contact-section button {
   background-color: #2e7d32;
   color: white;
+  padding: 12px;
   border: none;
-  padding: 10px 14px;
   border-radius: 6px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  width: 100%;
 }
 
-.btn-comprar:hover {
+.contact-section button:hover {
   background-color: #84bc3d;
   color: black;
 }
@@ -273,11 +389,34 @@ footer {
   background-color: #1b4d1a;
 }
 
-@media (max-width: 650px) {
-  .catalogo-lista {
-    justify-content: center;
+@media (max-width: 900px) {
+  .promociones-grid {
+    flex-direction: column;
   }
-  .catalogo-item {
-    width: 90%;
+
+  .promo-item {
+    flex: 1 1 100%;
+  }
+
+  .testimonios-grid,
+  .ventajas-grid {
+    flex-direction: column;
+  }
+
+  .testimonio-item,
+  .ventaja-item {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 15px;
   }
 }

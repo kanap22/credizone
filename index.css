@@ -123,10 +123,11 @@ nav ul li a.active {
 .promo-item img {
   width: 100%;
   height: auto;
+  max-height: 200px;
+  object-fit: contain;
   border-radius: 8px;
   margin-bottom: 12px;
   user-select: none;
-  object-fit: contain;
 }
 
 .promo-item h3 {

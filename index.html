@@ -25,43 +25,68 @@
   </header>
 
   <section class="carrusel">
-    <div class="carrusel-contenedor">
-      <div class="carrusel-slide"><img src="oferta1.jpg"></div>
-      <div class="carrusel-slide"><img src="oferta2.jpg"></div>
-      <div class="carrusel-slide"><img src="oferta3.jpg"></div>
-      <div class="carrusel-slide"><img src="oferta4.jpg"></div>
-      <div class="carrusel-slide"><img src="oferta5.jpg"></div>
-      <div class="carrusel-slide"><img src="oferta6.jpg"></div>
-      <div class="carrusel-slide"><img src="oferta7.jpg"></div>
-      <div class="carrusel-slide"><img src="oferta8.jpg"></div>
-      <div class="carrusel-slide"><img src="oferta9.jpg"></div>
-      <div class="carrusel-slide"><img src="oferta10.jpg"></div>
-      <div class="carrusel-slide"><img src="oferta11.jpg"></div>
-      <div class="carrusel-slide"><img src="oferta12.jpg"></div>
-      <div class="carrusel-slide"><img src="oferta13.jpg"></div>
-    </div>
+    <img src="oferta1.jpg" class="active" alt="Oferta 1" />
+    <img src="oferta2.jpg" alt="Oferta 2" />
+    <img src="oferta3.jpg" alt="Oferta 3" />
+    <img src="oferta4.jpg" alt="Oferta 4" />
+    <img src="oferta5.jpg" alt="Oferta 5" />
+    <img src="oferta6.jpg" alt="Oferta 6" />
+    <img src="oferta7.jpg" alt="Oferta 7" />
+    <img src="oferta8.jpg" alt="Oferta 8" />
+    <img src="oferta9.jpg" alt="Oferta 9" />
+    <img src="oferta10.jpg" alt="Oferta 10" />
+    <img src="oferta11.jpg" alt="Oferta 11" />
+    <img src="oferta12.jpg" alt="Oferta 12" />
+    <img src="oferta13.jpg" alt="Oferta 13" />
   </section>
 
   <section class="promociones">
     <h2>Promociones Destacadas</h2>
     <div class="promociones-grid">
       <div class="promo-item">
-        <img src="promo1.jpg">
+        <img src="promo1.jpg" alt="HONOR 200 lite" />
         <h3>HONOR 200 lite</h3>
         <p>¡Compra ahora y obtén descuento especial!</p>
-        <button>Ver más</button>
+        <button class="ver-mas-btn">Ver más</button>
+        <div class="promo-detalles" style="display:none;">
+          <ul>
+            <li>Pantalla: 6.72" IPS LCD</li>
+            <li>Procesador: MediaTek Dimensity 6020+</li>
+            <li>Batería: 4500 mAh</li>
+            <li>Cámara: 50 MP + 2 MP</li>
+            <li>Precio especial a crédito</li>
+          </ul>
+        </div>
       </div>
       <div class="promo-item">
-        <img src="promo2.jpg">
+        <img src="promo2.jpg" alt="Redmi 14C" />
         <h3>Redmi 14C</h3>
         <p>Financiamiento a 12 meses sin intereses.</p>
-        <button>Ver más</button>
+        <button class="ver-mas-btn">Ver más</button>
+        <div class="promo-detalles" style="display:none;">
+          <ul>
+            <li>Pantalla: 6.53" IPS LCD</li>
+            <li>Procesador: MediaTek Helio G35</li>
+            <li>Batería: 5000 mAh</li>
+            <li>Cámara: 13 MP + 2 MP</li>
+            <li>Incluye funda y protector</li>
+          </ul>
+        </div>
       </div>
       <div class="promo-item">
-        <img src="promo3.jpg">
+        <img src="promo3.jpg" alt="HONOR X7b" />
         <h3>HONOR X7b</h3>
         <p>Hasta 10 % de descuento en el segundo equipo.</p>
-        <button>Ver más</button>
+        <button class="ver-mas-btn">Ver más</button>
+        <div class="promo-detalles" style="display:none;">
+          <ul>
+            <li>Pantalla: 6.74" IPS LCD</li>
+            <li>Procesador: MediaTek Dimensity 6100+</li>
+            <li>Batería: 5000 mAh</li>
+            <li>Cámara: 48 MP</li>
+            <li>Garantía de 12 meses</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -88,17 +113,17 @@
     <h2>Ventajas de Comprar con Nosotros</h2>
     <div class="ventajas-grid">
       <div class="ventaja-item">
-        <img src="ventaja1.jpg">
+        <img src="ventaja1.jpg" alt="Facilidad de pago" />
         <h3>Facilidad de pago</h3>
         <p>Planes adaptados a tu presupuesto.</p>
       </div>
       <div class="ventaja-item">
-        <img src="ventaja2.jpg">
+        <img src="ventaja2.jpg" alt="Productos garantizados" />
         <h3>Productos garantizados</h3>
         <p>Calidad y respaldo en cada compra.</p>
       </div>
       <div class="ventaja-item">
-        <img src="ventaja3.jpg">
+        <img src="ventaja3.jpg" alt="Atención personalizada" />
         <h3>Atención personalizada</h3>
         <p>Estamos para ayudarte en todo momento.</p>
       </div>
@@ -131,6 +156,35 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    const images = document.querySelectorAll('.carrusel img');
+    let current = 0;
+
+    function showImage(index) {
+      images.forEach((img, i) => {
+        img.classList.toggle('active', i === index);
+      });
+    }
+
+    setInterval(() => {
+      current = (current + 1) % images.length;
+      showImage(current);
+    }, 6000);
+
+    document.querySelectorAll('.ver-mas-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const detalles = button.nextElementSibling;
+        if (detalles.style.display === 'none' || detalles.style.display === '') {
+          detalles.style.display = 'block';
+          button.textContent = 'Ver menos';
+        } else {
+          detalles.style.display = 'none';
+          button.textContent = 'Ver más';
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>

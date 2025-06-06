@@ -1,180 +1,283 @@
-body {
-  font-family: 'Poppins', sans-serif;
+* {
   margin: 0;
   padding: 0;
-  background-color: #f2fdf2;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f2f6f3;
   color: #333;
 }
 
+a {
+  text-decoration: none;
+  color: #2e7d32;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 header {
-  background-color: #0a6c3d;
+  background-color: #2e7d32;
   color: white;
-  padding: 20px;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
 }
 
 .logo-container h1 {
-  margin: 0;
-  font-size: 2rem;
+  font-weight: 700;
+  font-size: 1.8rem;
 }
 
 .logo-container .dot {
-  color: #45df8a;
+  color: #84bc3d;
 }
 
 .logo-container .tizayuca-black {
-  color: white;
-}
-
-.logo-container p {
-  margin: 5px 0 0;
+  color: black;
+  font-weight: 700;
+  margin-left: 5px;
 }
 
 nav ul {
   list-style: none;
-  padding: 0;
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 10px;
+  gap: 25px;
 }
 
-nav a {
-  text-decoration: none;
+nav ul li a {
+  font-weight: 600;
   color: white;
-  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-nav a.active {
-  color: #45df8a;
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #84bc3d;
+  color: black;
 }
 
 .carrusel {
+  max-width: 900px;
+  margin: 20px auto;
   overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.15);
   position: relative;
-  height: 300px;
 }
 
-.carrusel-contenedor {
-  display: flex;
-  width: calc(100% * 13);
-  animation: deslizar 40s linear infinite;
-}
-
-.carrusel-slide {
-  min-width: 100%;
-  box-sizing: border-box;
-}
-
-.carrusel-slide img {
+.carrusel img {
   width: 100%;
-  height: 300px;
-  object-fit: cover;
+  display: none;
+  user-select: none;
 }
 
-@keyframes deslizar {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-1200%); }
+.carrusel img.active {
+  display: block;
+  animation: fadeIn 6s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }
 
 .promociones {
-  padding: 40px;
-  background-color: #e6f8ec;
-  text-align: center;
-}
-
-.promociones-grid {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.promo-item {
   background-color: white;
-  padding: 15px;
-  border-radius: 10px;
-  width: 250px;
-}
-
-.promo-item img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.promo-item h3 {
-  margin: 10px 0 5px;
-  color: #0a6c3d;
-}
-
-.promo-item button {
-  background-color: #0a6c3d;
-  color: white;
-  border: none;
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.testimonios, .ventajas, .contact-section {
-  padding: 40px;
-  text-align: center;
-}
-
-.testimonios-grid, .ventajas-grid {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.testimonio-item, .ventaja-item {
-  width: 250px;
-  background: #ffffff;
+  max-width: 900px;
+  margin: 30px auto;
   padding: 20px;
   border-radius: 10px;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
 }
 
-.ventaja-item img {
-  width: 100%;
+.promociones h2 {
+  color: #2e7d32;
+  margin-bottom: 15px;
+}
+
+.testimonios {
+  background-color: white;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
   border-radius: 10px;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
 }
 
-.contact-section form {
+.ventajas {
+  background-color: white;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
+}
+
+.catalogo {
+  max-width: 1000px;
+  margin: 40px auto;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
+}
+
+.catalogo h2 {
+  color: #2e7d32;
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.catalogo-lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.catalogo-item {
+  background: #e8f5e9;
+  border: 2px solid #84bc3d;
+  border-radius: 10px;
+  width: 220px;
+  padding: 15px;
+  box-shadow: 0 0 8px rgb(0 0 0 / 0.1);
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  width: 300px;
-  margin: auto;
+  align-items: center;
+  transition: transform 0.3s ease;
 }
 
-.contact-section input, .contact-section textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+.catalogo-item:hover {
+  transform: scale(1.05);
+  border-color: #2e7d32;
 }
 
-.contact-section button {
-  background-color: #0a6c3d;
+.catalogo-item img {
+  width: 180px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  object-fit: contain;
+  user-select: none;
+}
+
+.catalogo-item-info h3 {
+  color: #2e7d32;
+  font-weight: 700;
+  margin-bottom: 6px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.catalogo-item-info p {
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #4a7c35;
+  text-align: center;
+}
+
+.btn-comprar {
+  background-color: #2e7d32;
   color: white;
   border: none;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.btn-comprar:hover {
+  background-color: #84bc3d;
+  color: black;
 }
 
 footer {
-  background-color: #0a6c3d;
+  background-color: #2e7d32;
   color: white;
+  padding: 15px 0;
   text-align: center;
-  padding: 20px;
+  font-weight: 600;
+  margin-top: 50px;
 }
 
-.footer-simple a {
-  color: #a5f3c6;
-  text-decoration: none;
-}
-
-.social-links a {
+.footer-simple .social-links a {
+  color: #84bc3d;
   margin: 0 10px;
+  font-weight: 600;
+}
+
+.footer-simple .social-links a:hover {
+  text-decoration: underline;
+}
+
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 400px;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+.modal-close {
+  float: right;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.modal-close:hover {
+  color: red;
+}
+
+#form-compra input, #form-compra textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+#form-compra button {
+  background-color: #2e7d32;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#form-compra button:hover {
+  background-color: #1b4d1a;
+}
+
+@media (max-width: 650px) {
+  .catalogo-lista {
+    justify-content: center;
+  }
+  .catalogo-item {
+    width: 90%;
+  }
 }

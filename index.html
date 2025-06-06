@@ -158,6 +158,7 @@
   </footer>
 
   <script>
+    // Carrusel
     const images = document.querySelectorAll('.carrusel img');
     let current = 0;
 
@@ -172,6 +173,7 @@
       showImage(current);
     }, 6000);
 
+    // Mostrar / Ocultar detalles promociones
     document.querySelectorAll('.ver-mas-btn').forEach(button => {
       button.addEventListener('click', () => {
         const detalles = button.nextElementSibling;

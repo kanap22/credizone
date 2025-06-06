@@ -308,10 +308,6 @@ footer {
   text-decoration: underline;
 }
 
-/* ======================== */
-/* === SECCIÓN CATÁLOGO === */
-/* ======================== */
-
 .catalogo {
   padding: 40px 20px;
   background-color: #fff;
@@ -331,7 +327,7 @@ footer {
   justify-items: center;
 }
 
-.producto {
+.catalogo-item {
   background-color: #f4f4f4;
   padding: 15px;
   border-radius: 10px;
@@ -340,11 +336,11 @@ footer {
   transition: transform 0.2s ease;
 }
 
-.producto:hover {
+.catalogo-item:hover {
   transform: scale(1.03);
 }
 
-.producto img {
+.catalogo-item img {
   width: 100%;
   height: 200px;
   object-fit: cover;
@@ -352,12 +348,68 @@ footer {
   margin-bottom: 10px;
 }
 
-.producto h3 {
+.catalogo-item h3 {
   font-size: 18px;
   margin: 10px 0 5px;
   color: #2ecc71;
 }
 
-.producto p {
+.catalogo-item p {
   color: #555;
+  margin-bottom: 10px;
 }
+
+.btn-comprar {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-comprar:hover {
+  background-color: #27ae60;
+}
+
+/* Modal de compra */
+
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 400px;
+  width: 90%;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+
+.modal-close {
+  float: right;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.modal-close:hover {
+  color: red;
+}
+
+#form-compra input, #form-compra textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
